@@ -1,5 +1,5 @@
 {
-  "name": "htmlcanvas",
+  "name": "htmltosvg",
   "version": "1.0.0",
   "description": "Library to draw html in canvas",
   "main": "index.js",

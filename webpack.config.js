@@ -2,11 +2,12 @@ module.exports = {
     entry: './src/index.js',
   	output: {
   		path: __dirname + '/dist',
-  		filename: 'htmlcanvas.js',
-  		library: 'htmlcanvas',
+  		filename: 'htmltosvg.js',
+  		library: 'htmltosvg',
   		libraryTarget: 'umd',
   		umdNamedDefine: true
   	},
+    watch: true,
     module: {
      loaders: [{
             test: /\.js$/,

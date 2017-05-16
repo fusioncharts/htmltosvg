@@ -2,9 +2,19 @@
 <html>
 <head>
 <title>html to canvas testing</title>
-<script src="../dist/htmlcanvas.js"></script>
-
+<script src="../dist/htmltosvg.js"></script>
+<script>
+function createSvg() {
+    htmltosvg.default.addHtmlNode(document.body);
+    document.getElementById('svg-container').innerHTML = htmltosvg.default.getSvg();
+}
+</script>
 </head>
-<body>
+<body onload='createSvg()'>
+    <div id='testingDiv' style='background: red; height: 200px; width: 200px'>
+        <div style='background: blue; height: 200px; width: 200px; float: left; margin-left: 100px'></div>
+    </div>
+
+    <div id='svg-container'></div>
 </body>
 </html>
