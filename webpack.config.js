@@ -8,6 +8,7 @@ module.exports = {
   		umdNamedDefine: true
   	},
     watch: true,
+    devtool: 'source-map',
     module: {
      loaders: [{
             test: /\.js$/,

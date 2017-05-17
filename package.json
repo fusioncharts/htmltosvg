@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test",
     "build": "webpack",
-    "lint": "eslint ./src/*.js"
+    "lint": "eslint ./src/**/*.js"
   },
   "author": "Subhash Halder",
   "license": "MIT",
