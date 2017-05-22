@@ -6,13 +6,8 @@ var styleRules = {
     }
 };
 
-function getNodeStyle(htmlNode) {
-    return window.getComputedStyle(htmlNode);
-}
-
-export default function(htmlNode, type) {
-    var stl = getNodeStyle(htmlNode),
-        rulesUsed = styleRules[type],
+export default function(stl, type) {
+    var rulesUsed = styleRules[type] || {},
         retStr = '';
 
     for(var key in rulesUsed) {

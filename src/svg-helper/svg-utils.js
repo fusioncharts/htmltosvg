@@ -30,6 +30,7 @@ function createSvgString(htmlNode) {
         try {
             retStr += htmlToSvgHelper(queue.dequeue());
         } catch(e) {
+            //console.log(e);
             break;
         }
     }
