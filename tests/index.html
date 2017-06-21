@@ -11,23 +11,70 @@ function createSvg() {
 </script>
 
 <style>
-  div{
-    padding:20px;
-    border-left:5px solid black;
-    /*border-radius: 50px 0px 0px 0px;*/
-    border-radius: 13em/3em 1em;
-  }
+
+  .arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-bottom: 5px solid black;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #f00;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 60px solid red;
+  border-bottom: 60px solid blue;
+
+  border-left: 60px solid green;
+}
+
+.arrow-left {
+  width: 10px;
+  height: 10px;
+  border-top: 10px solid red;
+  border-bottom: 10px solid green;
+
+  border-right:10px solid blue;
+  border-left:10px solid blue;
+}
+.roundRadius {
+  padding:10px;
+  width: 900px;
+  border-left:5px solid black;
+  border-top:5px solid blue;
+  border-right:5px solid green;
+  border-bottom:5px solid blue;
+  /*border-radius: 50px 0px 0px 0px;*/
+  /*border-radius: 13em/3em 1em;*/
+  border-radius: 55px 30px / 30px 55px;
+}
 </style>
 </head>
 <body onload='createSvg()'>
-    <div style="background:red; border-style: solid; border-color:blue; border-width:2px;">
+    <div class="arrow-up"></div>
+<div class="arrow-down"></div>
+<div class="arrow-left"></div>
+<div class="arrow-right"></div>
+<br/><br/><br/><br/>
+    <div style="background:red;" class="roundRadius">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br \>
       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi<br \>
       ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit<br \>
       in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      <div>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+      <div style="background:blue;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
     </div>
-
+<br/><br/><br/><br/>
     <div id='svg-container'></div>
 </body>
 </html>
