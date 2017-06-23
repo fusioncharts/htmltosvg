@@ -4,6 +4,7 @@ import svgTagBuilder from './svg-tag-builder';
 
 export default function(htmlNode) {
     var retStr = '';
+        console.log(htmlNode.nodeName);
     switch(htmlNode.nodeName) {
     case 'DIV':
         retStr = svgTagBuilder.rect(htmlNode);
